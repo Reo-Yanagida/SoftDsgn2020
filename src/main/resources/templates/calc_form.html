@@ -1,0 +1,18 @@
+<html>
+<body>
+<form action="/calc" method="POST">
+    <input type="text" name="x"/>
+    <select name="mode">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+<!--        ここから-->
+        <option value="%">%</option>
+<!--        ここまで追加-->
+    </select>
+    <input type="text" name="y" />
+    <button type="submit">計算</button>
+</form>
+</body>
+</html>

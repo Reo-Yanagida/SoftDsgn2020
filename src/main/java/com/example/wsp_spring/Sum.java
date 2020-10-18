@@ -6,23 +6,22 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
-public class Demo {
+public class Sum {
 
-    @GetMapping("/demo")
+    @GetMapping("/sum")
     @ResponseBody
     public String doGet() {
-        String body = "<form action='demo' method='POST'>" +
-                "<input type='text' name='yen' /> 円" +
-                "<button type='submit'>両替</button>" +
+        String body = "<form action='sum' method='POST'>" +
+                "<input type='text' name='x' /> + <input type='text' name='y' />" +
+                "<button type='submit'>加算</button>" +
                 "</form>";
         return body;
     }
 
-    @PostMapping("/demo")
+    @PostMapping("/sum")
     @ResponseBody
-    public String doPost(int yen) {
-        float ars = yen * 0.7290f;
-        String body = String.format("<p>%d 円は %.2f アルゼンチンペソ</p>", yen, ars);
+    public String doPost(int x, int y) {
+        String body = String.format("<p>%d + %d = %d</p>", x, y, x + y);
         return body;
     }
 
