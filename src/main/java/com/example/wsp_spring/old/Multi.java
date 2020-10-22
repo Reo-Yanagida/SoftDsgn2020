@@ -1,4 +1,4 @@
-package com.example.wsp_spring;
+package com.example.wsp_spring.old;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -10,7 +10,7 @@ public class Multi {
 
     @GetMapping("/multi")
     public String doGet() {
-        return "multi_form";
+        return "old/multi_form";
     }
 
     @PostMapping("/multi")
@@ -18,7 +18,7 @@ public class Multi {
         model.addAttribute("x", x);
         model.addAttribute("y", y);
         model.addAttribute("ans", x * y);
-        return "multi_ans";
+        return "old/multi_ans";
     }
 
 }

@@ -1,4 +1,4 @@
-package com.example.wsp_spring;
+package com.example.wsp_spring.old;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -10,13 +10,13 @@ public class Calc {
 
     @GetMapping("/calc")
     public String doGet() {
-        return "calc_form";
+        return "old/calc_form";
     }
 
     @PostMapping("/calc")
     public String doPost(float x, float y, String mode, Model model) {
         model.addAttribute("keisanMode", new KeisanMode(x, y, mode));
-        return "calc_ans";
+        return "old/calc_ans";
     }
 
 }

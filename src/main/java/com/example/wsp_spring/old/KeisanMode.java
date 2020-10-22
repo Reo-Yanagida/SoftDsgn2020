@@ -1,4 +1,4 @@
-package com.example.wsp_spring;
+package com.example.wsp_spring.old;
 
 public class KeisanMode {
 
