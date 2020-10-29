@@ -9,12 +9,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
-public class SignInController {
+public class SignController {
 
     private final SignService signService;
 
     @Autowired
-    public SignInController(SignService signService) {
+    public SignController(SignService signService) {
         this.signService = signService;
     }
 
